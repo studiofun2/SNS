@@ -1,0 +1,38 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sns-staging-113129-authRole",
+      "UnauthRoleArn": "arn:aws:iam::940621771461:role/amplify-sns-staging-113129-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::940621771461:role/amplify-sns-staging-113129-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-sns-staging-113129-deployment",
+      "UnauthRoleName": "amplify-sns-staging-113129-unauthRole",
+      "StackName": "amplify-sns-staging-113129",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:940621771461:stack/amplify-sns-staging-113129/9b0c07b0-bcdb-11ed-9e00-0a8fa7495e35",
+      "AmplifyAppId": "d2b0t12p3irs24"
+    },
+    "categories": {
+      "auth": {
+        "sns": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "sns-staging",
+          "Id": "aa0f92acf0ee4cfbbe06707fd705bbdb",
+          "Region": "ap-northeast-1"
+        }
+      },
+      "analytics": {
+        "Pinpoint": {
+          "Name": "sns-staging",
+          "Id": "aa0f92acf0ee4cfbbe06707fd705bbdb",
+          "Region": "ap-northeast-1"
+        },
+        "sns": {}
+      },
+      "api": {
+        "sns": {}
+      }
+    }
+  }
+}

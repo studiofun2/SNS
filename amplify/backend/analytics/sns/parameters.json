@@ -1,0 +1,22 @@
+{
+  "appName": "sns",
+  "roleName": "pinpointLambdaRole376222e0",
+  "cloudformationPolicyName": "cloudformationPolicy376222e0",
+  "cloudWatchPolicyName": "cloudWatchPolicy376222e0",
+  "pinpointPolicyName": "pinpointPolicy376222e0",
+  "authPolicyName": "pinpoint_amplify_376222e0",
+  "unauthPolicyName": "pinpoint_amplify_376222e0",
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "pinpointInAppMessagingPolicyName": "pinpointInAppMessagingPolicyName376222e0"
+}

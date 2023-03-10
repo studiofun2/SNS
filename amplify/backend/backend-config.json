@@ -1,0 +1,120 @@
+{
+  "analytics": {
+    "sns": {
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
+    }
+  },
+  "api": {
+    "sns": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "This is an api key"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "sns": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "notifications": {
+    "sns": {
+      "channels": [
+        "InAppMessaging"
+      ],
+      "service": "Pinpoint"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_analytics_Pinpoint_Id": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_analytics_Pinpoint_Name": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_analytics_Pinpoint_Region": {
+      "usedBy": [
+        {
+          "category": "analytics",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Id": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Name": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    },
+    "AMPLIFY_notifications_Pinpoint_Region": {
+      "usedBy": [
+        {
+          "category": "notifications",
+          "resourceName": "Pinpoint"
+        }
+      ]
+    }
+  }
+}

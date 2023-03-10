@@ -1,0 +1,29 @@
+type Message @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomId: ID! @index(name: "byRoom")
+  userId: String!
+  message: String!
+  removed: Boolean!
+  createAt: AWSDateTime
+  updateAt: AWSDateTime
+}
+
+type Roommate @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomId: ID! @index(name: "byRoom")
+  userId: String!
+  leaved: Boolean!
+  createAt: AWSDateTime!
+  updateAt: AWSDateTime!
+}
+
+type Room @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomName: String!
+  owner: String!
+  breakuped: Boolean!
+  createAt: AWSDateTime!
+  Roommates: [Roommate] @hasMany(indexName: "byRoom", fields: ["id"])
+  updateAt: AWSDateTime!
+  Messages: [Message] @hasMany(indexName: "byRoom", fields: ["id"])
+}
